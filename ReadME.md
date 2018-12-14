@@ -29,10 +29,10 @@ The functionalities of the app can be summarised as:
 
 ### Team Members :
 
-Dipan Roy (ECE 2nd Year, Kalyani Government Engineering College)
-Suranjan Daw (CSE 2nd Year, Heritage Institute of Technology)
-Meghna Misra (ECE 3rd Year, Heritage Institute of Technology)
-Samyabrata Das (AEIE 3rd Year, Heritage Institute of Technology)
+1. Dipan Roy (ECE 2nd Year, Kalyani Government Engineering College)
+2. Suranjan Daw (CSE 2nd Year, Heritage Institute of Technology)
+3. Meghna Misra (ECE 3rd Year, Heritage Institute of Technology)
+4. Samyabrata Das (AEIE 3rd Year, Heritage Institute of Technology)
 
 ----------------------------------------
 
