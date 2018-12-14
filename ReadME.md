@@ -1,6 +1,6 @@
 IEM HACKATHON Repository READ ME
 
-###This Contains the Android Studio Files of Alert AP Application.
+### This Contains the Android Studio Files of Alert AP Application.
 Please Insert your own Google Maps API KEY in /values/google_maps_api.xml to run the app sucessfully.
 
 
