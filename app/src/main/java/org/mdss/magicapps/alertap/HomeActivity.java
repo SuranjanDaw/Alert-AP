@@ -208,6 +208,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         setSupportActionBar(toolbar);
         m = LocationServices.getFusedLocationProviderClient(this);
         getLocation();
+
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
@@ -229,7 +230,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 
             /* Setting alarm for every one hour from the current time.*/
             int m = 1; //total minutes
-            int intervalTimeMillis = 1000 * 60 * 180; // m min
+            int intervalTimeMillis = 1000 * 60 * 1; // m min
             if (alarmMgr != null) {
                 alarmMgr.setRepeating(AlarmManager.RTC_WAKEUP,
                         calendar.getTimeInMillis(), intervalTimeMillis,
@@ -239,7 +240,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         //END OF ALARM BROADCAST
         searchTxt = findViewById(R.id.search_bar);
         location1 = new double[2];
-        polutant = new TextView[7];
+        polutant = new TextView[8];
         polutant[0] = findViewById(R.id.co);
         polutant[1] = findViewById(R.id.no2);
         polutant[2] = findViewById(R.id.so2);
@@ -247,6 +248,8 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         polutant[4]= findViewById(R.id.pm25);
         polutant[5] = findViewById(R.id.o3);
         polutant[6] = findViewById(R.id.wh);
+        polutant[7] = findViewById(R.id.aqi);
+        setPreference();
         //currentLocation = findViewById(R.id.currentLoc);
         //t1 = findViewById(R.id.wh);
 
@@ -420,5 +423,21 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         searchTxt.setText("");
         ImageView img = (ImageView) findViewById(R.id.magnify);
         img.setImageResource(R.drawable.ic_magnify);
+    }
+    public void setPreference()
+    {
+        SharedPreferences shared = getSharedPreferences("polutantPref", Context.MODE_PRIVATE);
+        if(shared.getInt("co2",0) == 1)
+            polutant[0].setVisibility(View.VISIBLE);
+        if(shared.getInt("so2",0) == 1)
+            polutant[1].setVisibility(View.VISIBLE);
+        if(shared.getInt("no2",0) == 1)
+            polutant[2].setVisibility(View.VISIBLE);
+        if(shared.getInt("pm10",0) == 1)
+            polutant[3].setVisibility(View.VISIBLE);
+        if(shared.getInt("pm25",0) == 1)
+            polutant[4].setVisibility(View.VISIBLE);
+        if(shared.getInt("o3",0) == 1)
+            polutant[5].setVisibility(View.VISIBLE);
     }
 }
