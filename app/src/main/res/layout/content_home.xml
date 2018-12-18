@@ -92,7 +92,7 @@
                         android:textStyle="bold"
                         android:textColor="#ffff"
                         android:textSize="25dp"
-                        android:text="Get weather Data"/>
+                        android:text="Current weather Data"/>
                 </LinearLayout>
                 <LinearLayout
                     android:id="@+id/content"
